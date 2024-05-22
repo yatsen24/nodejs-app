@@ -1,4 +1,4 @@
-ipeline{
+pipeline{
     agent { docker { image 'node:14'
            args '-u root:root'}}
     stages{
@@ -18,8 +18,8 @@ ipeline{
       stage('upload artifact'){
         steps{
             sh 'curl -uadmin:AP5W3QwUNxGwfmEsFDfksXWfvkE -T\
-             *.tgz \
-                "http://54.236.46.36:8081/artifactory/nodejs/utc-app-${BUILD ID}.tgz"'
+            *.tgz \
+               "http://54.236.46.36:8081/artifactory/nodejs/utc-app-${BUILD ID}.tgz"'
         }
       }
     }
