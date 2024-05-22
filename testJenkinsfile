@@ -19,7 +19,7 @@ pipeline{
         steps{
             sh 'curl -uadmin:AP5W3QwUNxGwfmEsFDfksXWfvkE -T\
             *.tgz\
-               "http://54.236.46.36:8081/artifactory/nodejs/nodejs-${BUILD ID}.tgz"'
+               "http://54.236.46.36:8081/artifactory/nodejs/nodejs${BUILD ID}.tgz"'
         }
       }
     }
