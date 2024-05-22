@@ -1,8 +1,8 @@
 pipeline{
     agent any
     stages{
-      stage('Dep install1'){
-        agent { docker {image 'node:14.18.0'}}
+      stage('Dep install'){
+        agent { docker {image 'node:9.8.0'}}
         steps{
             sh 'npm cache verify'
             //sh 'sudo chown -R 995:993 "/.npm"'
