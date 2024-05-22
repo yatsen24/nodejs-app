@@ -2,7 +2,7 @@ pipeline{
     agent any
     stages{
       stage('Dep install1'){
-        agent { docker {image 'node:14.18.0 }}
+        agent { docker {image 'node:14.18.0'}}
         args {'-u root:root'}
         steps{
             sh 'npm cache verify'
