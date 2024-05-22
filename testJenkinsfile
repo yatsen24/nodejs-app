@@ -1,10 +1,8 @@
-pipeline{
+ipeline{
     agent { docker { image 'node:14'
-    args '-u root:root'}}
-
+           args '-u root:root'}}
     stages{
-      stage('Dep install'){
-       
+      stage('Dep install'){ 
         steps{
          //   sh 'npm cache clean'
          //   sh 'sudo chown -R 995:993 "/.npm"'
@@ -13,11 +11,11 @@ pipeline{
       } 
       stage('package'){
         steps{
-            sh 'rm -rf *.tgz || echo""'
+            sh 'rm -rf *.tgz || echo ""'
             sh 'npm pack'
         }
       } 
-      stage('upload artifct'){
+      stage('upload artifact'){
         steps{
             sh 'curl -uadmin:AP5W3QwUNxGwfmEsFDfksXWfvkE -T\
              *.tgz \
