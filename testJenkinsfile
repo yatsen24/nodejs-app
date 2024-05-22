@@ -4,7 +4,7 @@ pipeline{
       stage('Dep install1'){
         agent { docker { image 'node:9.8.0'}}
         steps{
-            sh 'npm cache clean'
+            sh 'npm cache verify'
             sh 'sudo chown -R 995:993 "/.npm"'
             sh 'npm install'
         }
